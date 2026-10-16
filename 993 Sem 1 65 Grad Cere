@@ -1,0 +1,18 @@
+a,b,c = [int(e) for e in input().split()]
+nisit = {}
+g = {}
+for i in range(a):
+    y = input().split()
+    nisit[y[0]] = y[1]
+for i in range(b):
+    y = input().split()
+    g[y[0]] = y[1:]
+for i in range(c):
+    w = input().split()
+    s = {}
+    for e in w:
+        for k in g[e]:
+            if s == {}:
+                s = {nisit[k]}
+            else: s = {nisit[k]}&s 
+    print(s)

@@ -1,0 +1,17 @@
+n = int(input())
+d = {}
+for i in range(n):
+    x = input().split()
+    d[x[0]] = x[1]
+y = input().split()
+tf = []
+while len(y) != 1:
+    c = [d.get(e,"kuy") for e in y]
+    sc = set(c)
+    if len(sc) == len(c) and "kuy" not in sc:
+        print("OK")
+    else:
+        print("Not OK")
+    y = input().split()
+
+
